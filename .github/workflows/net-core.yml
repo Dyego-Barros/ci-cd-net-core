@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print the input name to STDOUT
-        run: echo The username is teste net core funcionando
+      - name: SAIDA DE TERMINAL
+        run: echo CI/CD NET CORE OK
