@@ -1,0 +1,8 @@
+on:
+ push:
+   branches: 
+      -main
+
+jobs:
+  steps:
+    run: echo "CI/CD NET CORE OK"
