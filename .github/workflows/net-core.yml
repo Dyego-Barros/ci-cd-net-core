@@ -10,11 +10,7 @@ jobs:
       - name: GET DOTNET       
         run: wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb  
       - name: INSTALL .NET
-        run: sudo dpkg -i packages-microsoft-prod.deb
-      - name: UPDATE 
-        run: apt-get update 
-      - name: UPGRADE
-        run:  apt-get update -y  
+        run: sudo dpkg -i packages-microsoft-prod.deb      
       - name: INSTALL SDK
         run: sudo apt-get install -y dotnet-sdk-6.0
       - name: INSTALL RUNTIME
