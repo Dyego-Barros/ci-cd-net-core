@@ -22,8 +22,8 @@ jobs:
         run: dotnet build
       - name: TEST .NET
         run: dotnet test
-      - name: RUNNING DOT API
-        run: dotnet run
+      - name: PIPELINE SUCCESS
+        run: echo "PIPELINE SUCCESSFULLY!"
 
   
 
