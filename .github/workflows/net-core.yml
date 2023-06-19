@@ -6,7 +6,8 @@ jobs:
   print-username:
     runs-on: ubuntu-latest
 
-    steps:  INSTALL .NET SDK6.0      
+    steps:  INSTALL .NET SDK6.0     
+      - name: Checkout 
         uses: actions/checkout@v3
         run: wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
         run: sudo dpkg -i packages-microsoft-prod.deb
