@@ -13,10 +13,12 @@ jobs:
         run: sudo dpkg -i packages-microsoft-prod.deb      
       - name: INSTALL SDK
         run: sudo apt-get install -y dotnet-sdk-6.0
-      - name: INSTALL RUNTIME
-        run: sudo apt-get install -y aspnetcore-runtime-6.0 
+      # - name: INSTALL RUNTIME
+      #   run: sudo apt-get install -y aspnetcore-runtime-6.0 
       - name: LIST DOTNET
-        run: dotnet build
+        run: dotnet --list-sdks
+      - name: LIST RUNTIME
+        run: dotnet --list-runtimes
 
   
 
