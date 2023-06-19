@@ -9,17 +9,16 @@ jobs:
     steps:    
       - name: Checkout 
         uses: actions/checkout@v3
-        run: wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-        # run: sudo dpkg -i packages-microsoft-prod.deb
-        # run: sudo apt-get update && upgrade -y  
-        # run: sudo apt-get install -y dotnet-sdk-6.0
-        # run: sudo apt-get install -y aspnetcore-runtime-6.0
+        run: wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb\
+             sudo dpkg -i packages-microsoft-prod.deb\
+             sudo apt-get update &&   sudo apt-get install -y dotnet-sdk-6.0\
+             sudo apt-get install -y aspnetcore-runtime-6.0\
 
-     steps: BUILD WEBAPI
-        run: sudo dpkg -i packages-microsoft-prod.deb
+    steps: BUILD WEBAPI
+       run: dotnet build
 
-    # steps: TEST WEBAPI
-    #    run: dotnet test
+    steps: TEST WEBAPI
+       run: dotnet test
 
       
 
