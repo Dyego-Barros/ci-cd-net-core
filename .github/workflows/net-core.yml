@@ -8,18 +8,15 @@ jobs:
 
     steps:    
      - name: INSTALL .NET CORE       
-       run: wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
-            sudo dpkg -i packages-microsoft-prod.deb \
-            sudo apt-get update &&   sudo apt-get install -y dotnet-sdk-6.0 \
-            sudo apt-get install -y aspnetcore-runtime-6.0 \
+       run: dotnet --list
 
-    steps: 
-     - name: BUILD WEBAPI
-       run: dotnet build
+    # steps: 
+    #  - name: BUILD WEBAPI
+    #    run: dotnet build
 
-    steps: 
-     - name: TEST WEBAPI
-        run: dotnet run
+    # steps: 
+    #  - name: TEST WEBAPI
+    #     run: dotnet run
 
       
 
