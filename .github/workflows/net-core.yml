@@ -7,14 +7,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:    
-      - name: Checkout 
-      
+      - name: GET DOTNET       
         run: wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-        run: sudo dpkg -i packages-microsoft-prod.deb
-        run: sudo apt-get update &&   sudo apt-get install -y dotnet-sdk-6.0
-        run: sudo apt-get install -y aspnetcore-runtime-6.0
 
-   
+       
+    steps:
+      - name: INSTALL .NET
+         run: sudo dpkg -i packages-microsoft-prod.deb
+
+
+    steps:
+      - name: UPDATE E UPGRADE
+        run: sudo apt-get update && upgrade -y 
+        
+
+    steps:
+      - name: INSTALL SDK
+         run: sudo apt-get install -y dotnet-sdk-6.0
+
+
+    steps:
+      - name: INSTALL RUNTIME
+         run: sudo apt-get install -y aspnetcore-runtime-6.0 
+
+
+    steps: LIST DOTNET
+       run: dotnet build
+
+  
 
       
 
